@@ -36,14 +36,17 @@ header.scrolled {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Add top margin to main to account for fixed header */
+/* Header spacer to push content below fixed header */
+.header-spacer {
+  height: 280px; /* Matches header height */
+  width: 100%;
+}
+
+/* Reset main spacing */
 main {
-  margin-top: 0; /* Reset margin */
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   padding: 0;
-  padding-top: 320px; /* Use padding instead of margin */
 }
 
 .header-logo {
@@ -271,9 +274,13 @@ footer {
     padding: 1rem 1.5rem;
   }
   
+  .header-spacer {
+    height: 220px; /* Adjusted for mobile header height */
+  }
+  
   main {
-    margin-top: 0; /* Reset margin */
-    padding-top: 260px; /* Use padding instead for mobile */
+    margin: 0 auto;
+    padding: 0;
   }
   
   .header-logo {
@@ -339,9 +346,13 @@ footer {
     padding: 0.8rem 1rem;
   }
   
+  .header-spacer {
+    height: 180px; /* Adjusted for small mobile header height */
+  }
+  
   main {
-    margin-top: 0; /* Reset margin */
-    padding-top: 240px; /* Use padding instead for small mobile */
+    margin: 0 auto;
+    padding: 0;
   }
   
   .header-logo {
