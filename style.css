@@ -1,0 +1,391 @@
+/* Puāwai Tonu Website Styles - QTC Inspired */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  background-color: #f8fdf8;
+  color: #2c2c2c;
+  line-height: 1.7;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5f2e5;
+  transition: all 0.3s ease;
+}
+
+/* Scrolled header state */
+header.scrolled {
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Add top margin to main to account for fixed header */
+main {
+  margin-top: 0; /* Reset margin */
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  padding-top: 320px; /* Use padding instead of margin */
+}
+
+.header-logo {
+  max-height: 200px;
+  max-width: 240px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+/* Smaller logo when scrolled */
+header.scrolled .header-logo {
+  max-height: 60px;
+  max-width: 120px;
+}
+
+/* Navigation menu */
+.header-nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-button {
+  background-color: #f0f7f0;
+  color: #2d5a2d;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #d4edda;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-button:hover {
+  background-color: #2d5a2d;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(45, 90, 45, 0.2);
+}
+
+/* Special styling for home button */
+.home-button {
+  background-color: #2d5a2d;
+  color: white;
+  font-weight: 600;
+}
+
+.home-button:hover {
+  background-color: #1a4a1a;
+  transform: translateY(-2px);
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+section {
+  margin-bottom: 0;
+  padding: 4rem 2rem;
+  background-color: transparent;
+  position: relative;
+}
+
+/* Alternating background colors */
+section:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+section:nth-child(even) {
+  background-color: #f8fdf8;
+}
+
+/* Divider line between sections */
+section:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #7fb77f 20%, #7fb77f 80%, transparent);
+  opacity: 0.6;
+}
+
+section h2 {
+  color: #1a4a1a;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+}
+
+article {
+  margin-bottom: 3rem;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+article:last-child {
+  margin-bottom: 0;
+}
+
+article h3 {
+  color: #2d5a2d;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  text-align: left;
+  color: #2c2c2c;
+  max-width: 70ch;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+strong {
+  font-weight: 600;
+  color: #1a4a1a;
+}
+
+a {
+  color: #2d5a2d;
+  text-decoration: underline;
+  text-decoration-color: #7fb77f;
+  text-underline-offset: 3px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: #1a4a1a;
+  text-decoration-color: #1a4a1a;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-top: 1px solid #e5f2e5;
+  color: #666;
+  font-size: 0.95rem;
+  margin-top: 4rem;
+}
+
+/* Special styling for whakataukī */
+.whakataukī {
+  background-color: #f0f7f0;
+  border: 1px solid #d4edda;
+  border-radius: 4px;
+  padding: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.whakataukī p {
+  margin-bottom: 1.5rem;
+  color: #2d5a2d;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-style: italic;
+  max-width: none;
+}
+
+.whakataukī p:last-child {
+  margin-bottom: 0;
+}
+
+.whakataukī em {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #1a4a1a;
+  font-style: normal;
+}
+
+/* Profile image styling */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e5f2e5;
+  transition: all 0.3s ease;
+}
+
+.profile-image:hover {
+  border-color: #7fb77f;
+  transform: scale(1.05);
+}
+
+.profile-header h3 {
+  margin-bottom: 0;
+  flex: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+  
+  header.scrolled {
+    padding: 1rem 1.5rem;
+  }
+  
+  main {
+    margin-top: 0; /* Reset margin */
+    padding-top: 260px; /* Use padding instead for mobile */
+  }
+  
+  .header-logo {
+    max-height: 80px;
+    max-width: 200px;
+  }
+  
+  header.scrolled .header-logo {
+    max-height: 50px;
+    max-width: 100px;
+  }
+  
+  .header-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.3rem;
+  }
+  
+  .nav-button {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  section {
+    padding: 3rem 1.5rem;
+  }
+  
+  section h2 {
+    font-size: 1.8rem;
+  }
+  
+  article h3 {
+    font-size: 1.3rem;
+  }
+  
+  body {
+    font-size: 16px;
+  }
+  
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+  
+  /* Adjust divider width on mobile */
+  section:not(:last-child)::after {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 1rem;
+  }
+  
+  header.scrolled {
+    padding: 0.8rem 1rem;
+  }
+  
+  main {
+    margin-top: 0; /* Reset margin */
+    padding-top: 240px; /* Use padding instead for small mobile */
+  }
+  
+  .header-logo {
+    max-height: 60px;
+    max-width: 150px;
+  }
+  
+  header.scrolled .header-logo {
+    max-height: 40px;
+    max-width: 80px;
+  }
+  
+  .header-nav {
+    gap: 0.2rem;
+  }
+  
+  .nav-button {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  section {
+    padding: 2.5rem 1rem;
+  }
+  
+  section h2 {
+    font-size: 1.6rem;
+  }
+  
+  .whakataukī {
+    padding: 1.5rem;
+  }
+  
+  .profile-header {
+    gap: 0.8rem;
+  }
+  
+  .profile-image {
+    width: 80px;
+    height: 80px;
+  }
+  
+  /* Full width divider on small screens */
+  section:not(:last-child)::after {
+    width: 95%;
+  }
+}
