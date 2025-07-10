@@ -262,6 +262,28 @@ footer {
   flex: 1;
 }
 
+/* Header image styling */
+.header-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+/* Header image section - remove background and padding */
+#header {
+  background-color: transparent !important;
+  padding: 0 !important;
+  margin-bottom: 0;
+}
+
+/* Remove alternating background from header image section */
+#header::after {
+  display: none !important;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   header {
@@ -334,6 +356,15 @@ footer {
   /* Adjust divider width on mobile */
   section:not(:last-child)::after {
     width: 90%;
+  }
+  
+  /* Header image responsive styling */
+  .header-image {
+    max-width: 100%;
+  }
+  
+  #header {
+    margin-bottom: 0;
   }
 }
 
